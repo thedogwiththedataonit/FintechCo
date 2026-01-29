@@ -218,5 +218,98 @@
     "temperature": "18°C",
     "weather": "Partly Cloudy",
     "date": "Wednesday, July 10th, 2025"
+  },
+  "analytics": {
+    "stats": [
+      {
+        "label": "CONVERSION RATE",
+        "value": "4.2%",
+        "description": "FROM VISITORS TO USERS",
+        "intent": "positive",
+        "icon": "atom",
+        "direction": "up"
+      },
+      {
+        "label": "USER GROWTH",
+        "value": "+2,847",
+        "description": "NEW USERS THIS MONTH",
+        "intent": "positive",
+        "icon": "proccesor",
+        "direction": "up"
+      },
+      {
+        "label": "AVG TRANSACTION",
+        "value": "$1,284",
+        "description": "PER USER MONTHLY",
+        "intent": "neutral",
+        "icon": "gear",
+        "tag": "30 days"
+      },
+      {
+        "label": "CHURN RATE",
+        "value": "1.8%",
+        "description": "MONTHLY ATTRITION",
+        "intent": "negative",
+        "icon": "boom",
+        "direction": "down"
+      }
+    ],
+    "conversionFunnel": [
+      { "stage": "VISITORS", "count": 125000, "percentage": 100 },
+      { "stage": "SIGN UPS", "count": 18750, "percentage": 15 },
+      { "stage": "VERIFIED USERS", "count": 12500, "percentage": 10 },
+      { "stage": "FIRST TRANSACTION", "count": 5250, "percentage": 4.2 },
+      { "stage": "ACTIVE USERS", "count": 2856, "percentage": 2.3 }
+    ],
+    "userAcquisition": [
+      { "source": "Organic Search", "users": 45200, "percentage": 38.2, "trend": "up" },
+      { "source": "Paid Ads", "users": 28500, "percentage": 24.1, "trend": "up" },
+      { "source": "Referrals", "users": 22100, "percentage": 18.7, "trend": "neutral" },
+      { "source": "Social Media", "users": 15800, "percentage": 13.4, "trend": "down" },
+      { "source": "Direct Traffic", "users": 6650, "percentage": 5.6, "trend": "neutral" }
+    ],
+    "transactionMetrics": [
+      { "category": "Bank Transfers", "volume": 42850, "revenue": 856420, "avgValue": 1998, "trend": "up" },
+      { "category": "Card Payments", "volume": 128640, "revenue": 1542800, "avgValue": 1199, "trend": "up" },
+      { "category": "Investments", "volume": 8420, "revenue": 4825600, "avgValue": 5732, "trend": "neutral" },
+      { "category": "Forex Exchange", "volume": 15680, "revenue": 2352000, "avgValue": 1500, "trend": "down" }
+    ],
+    "performanceMetrics": [
+      { "title": "UPTIME", "value": "99.97", "target": "99.9", "unit": "%", "variant": "success" },
+      { "title": "API LATENCY", "value": "42", "target": "100", "unit": "ms", "variant": "success" },
+      { "title": "ERROR RATE", "value": "0.12", "target": "0.5", "unit": "%", "variant": "success" },
+      { "title": "THROUGHPUT", "value": "12.4K", "target": "10K", "unit": "req/s", "variant": "success" }
+    ],
+    "chartData": {
+      "week": [
+        { "date": "Mon", "signups": 420, "conversions": 84, "retention": 92 },
+        { "date": "Tue", "signups": 380, "conversions": 76, "retention": 91 },
+        { "date": "Wed", "signups": 510, "conversions": 102, "retention": 93 },
+        { "date": "Thu", "signups": 450, "conversions": 90, "retention": 94 },
+        { "date": "Fri", "signups": 620, "conversions": 124, "retention": 92 },
+        { "date": "Sat", "signups": 340, "conversions": 68, "retention": 95 },
+        { "date": "Sun", "signups": 280, "conversions": 56, "retention": 94 }
+      ],
+      "month": [
+        { "date": "Week 1", "signups": 2800, "conversions": 560, "retention": 92 },
+        { "date": "Week 2", "signups": 3200, "conversions": 640, "retention": 93 },
+        { "date": "Week 3", "signups": 2950, "conversions": 590, "retention": 91 },
+        { "date": "Week 4", "signups": 3400, "conversions": 680, "retention": 94 }
+      ],
+      "year": [
+        { "date": "Jan", "signups": 8500, "conversions": 1700, "retention": 88 },
+        { "date": "Feb", "signups": 9200, "conversions": 1840, "retention": 89 },
+        { "date": "Mar", "signups": 10800, "conversions": 2160, "retention": 90 },
+        { "date": "Apr", "signups": 11500, "conversions": 2300, "retention": 91 },
+        { "date": "May", "signups": 12200, "conversions": 2440, "retention": 91 },
+        { "date": "Jun", "signups": 11800, "conversions": 2360, "retention": 92 },
+        { "date": "Jul", "signups": 13500, "conversions": 2700, "retention": 92 },
+        { "date": "Aug", "signups": 14200, "conversions": 2840, "retention": 93 },
+        { "date": "Sep", "signups": 13800, "conversions": 2760, "retention": 93 },
+        { "date": "Oct", "signups": 15200, "conversions": 3040, "retention": 94 },
+        { "date": "Nov", "signups": 16500, "conversions": 3300, "retention": 94 },
+        { "date": "Dec", "signups": 18200, "conversions": 3640, "retention": 95 }
+      ]
+    }
   }
 }
