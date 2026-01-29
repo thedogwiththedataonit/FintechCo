@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import { usePathname } from "next/navigation";
 
 import {
   Sidebar,
@@ -36,60 +37,44 @@ import Image from "next/image";
 import { useIsV0 } from "@/lib/v0-context";
 
 // This is sample data for the sidebar
-const data = {
-  navMain: [
-    {
-      title: "Tools",
-      items: [
-        {
-          title: "Overview",
-          url: "/",
-          icon: BracketsIcon,
-          isActive: true,
-        },
-        {
-          title: "Analytics",
-          url: "/analytics",
-          icon: AtomIcon,
-          isActive: false,
-        },
-        {
-          title: "Portfolios",
-          url: "/portfolios",
-          icon: ProcessorIcon,
-          isActive: false,
-        },
-        {
-          title: "Compliance",
-          url: "/compliance",
-          icon: CuteRobotIcon,
-          isActive: false,
-        },
-        {
-          title: "Messages",
-          url: "/messages",
-          icon: EmailIcon,
-          isActive: false,
-        },
-        {
-          title: "Admin Settings",
-          url: "/admin",
-          icon: GearIcon,
-          isActive: false,
-          locked: true,
-        },
-      ],
-    },
-  ],
-  desktop: {
-    title: "Desktop (Online)",
-    status: "online",
+const navItems = [
+  {
+    title: "Overview",
+    url: "/",
+    icon: BracketsIcon,
   },
-  user: {
-    name: "Alex Chen",
-    email: "alex.chen@fintechco.com",
-    avatar: "/avatars/user_krimson.png",
+  {
+    title: "Analytics",
+    url: "/analytics",
+    icon: AtomIcon,
   },
+  {
+    title: "Portfolios",
+    url: "/portfolios",
+    icon: ProcessorIcon,
+  },
+  {
+    title: "Compliance",
+    url: "/compliance",
+    icon: CuteRobotIcon,
+  },
+  {
+    title: "Messages",
+    url: "/messages",
+    icon: EmailIcon,
+  },
+  {
+    title: "Admin Settings",
+    url: "/admin",
+    icon: GearIcon,
+    locked: true,
+  },
+];
+
+const userData = {
+  name: "Alex Chen",
+  email: "alex.chen@fintechco.com",
+  avatar: "/avatars/user_krimson.png",
 };
 
 export function DashboardSidebar({
@@ -97,6 +82,7 @@ export function DashboardSidebar({
   ...props
 }: React.ComponentProps<typeof Sidebar>) {
   const isV0 = useIsV0();
+  const pathname = usePathname();
 
   return (
     <Sidebar {...props} className={cn("py-sides", className)}>
@@ -111,18 +97,16 @@ export function DashboardSidebar({
       </SidebarHeader>
 
       <SidebarContent>
-        {data.navMain.map((group, i) => (
-          <SidebarGroup
-            className={cn(i === 0 && "rounded-t-none")}
-            key={group.title}
-          >
-            <SidebarGroupLabel>
-              <Bullet className="mr-2" />
-              {group.title}
-            </SidebarGroupLabel>
-            <SidebarGroupContent>
-              <SidebarMenu>
-                {group.items.map((item) => (
+        <SidebarGroup className="rounded-t-none">
+          <SidebarGroupLabel>
+            <Bullet className="mr-2" />
+            Tools
+          </SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              {navItems.map((item) => {
+                const isActive = pathname === item.url;
+                return (
                   <SidebarMenuItem
                     key={item.title}
                     className={cn(
@@ -133,7 +117,7 @@ export function DashboardSidebar({
                   >
                     <SidebarMenuButton
                       asChild={!item.locked}
-                      isActive={item.isActive}
+                      isActive={isActive}
                       disabled={item.locked}
                       className={cn(
                         "disabled:cursor-not-allowed",
@@ -158,11 +142,11 @@ export function DashboardSidebar({
                       </SidebarMenuBadge>
                     )}
                   </SidebarMenuItem>
-                ))}
-              </SidebarMenu>
-            </SidebarGroupContent>
-          </SidebarGroup>
-        ))}
+                );
+              })}
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
       </SidebarContent>
 
       <SidebarFooter className="p-0">
@@ -178,8 +162,8 @@ export function DashboardSidebar({
                   <PopoverTrigger className="flex gap-0.5 w-full group cursor-pointer">
                     <div className="shrink-0 flex size-14 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground overflow-clip">
                       <Image
-                        src={data.user.avatar}
-                        alt={data.user.name}
+                        src={userData.avatar}
+                        alt={userData.name}
                         width={120}
                         height={120}
                       />
@@ -187,10 +171,10 @@ export function DashboardSidebar({
                     <div className="group/item pl-3 pr-1.5 pt-2 pb-1.5 flex-1 flex bg-sidebar-accent hover:bg-sidebar-accent-active/75 items-center rounded group-data-[state=open]:bg-sidebar-accent-active group-data-[state=open]:hover:bg-sidebar-accent-active group-data-[state=open]:text-sidebar-accent-foreground">
                       <div className="grid flex-1 text-left text-sm leading-tight">
                         <span className="truncate text-xl font-display">
-                          {data.user.name}
+                          {userData.name}
                         </span>
                         <span className="truncate text-xs uppercase opacity-50 group-hover/item:opacity-100">
-                          {data.user.email}
+                          {userData.email}
                         </span>
                       </div>
                       <DotsVerticalIcon className="ml-auto size-4" />
