@@ -1,0 +1,222 @@
+{
+  "dashboardStats": [
+    {
+      "label": "TRANSACTIONS PROCESSED",
+      "value": "98.7%",
+      "description": "SUCCESS RATE",
+      "intent": "positive",
+      "icon": "gear",
+      "direction": "up"
+    },
+    {
+      "label": "REVENUE",
+      "value": "$1.2M",
+      "description": "MONTHLY TOTAL",
+      "intent": "positive",
+      "icon": "proccesor",
+      "direction": "up"
+    },
+    {
+      "label": "ACTIVE USERS",
+      "value": "12,847",
+      "description": "ACROSS ALL PLATFORMS",
+      "intent": "neutral",
+      "icon": "boom",
+      "tag": "4 weeks"
+    }
+  ],
+  "chartData": {
+    "week": [
+      {
+        "date": "06/07",
+        "revenue": 50000,
+        "expenses": 30000,
+        "fees": 10000
+      },
+      {
+        "date": "07/07",
+        "revenue": 250000,
+        "expenses": 15000,
+        "fees": 30000
+      },
+      {
+        "date": "08/07",
+        "revenue": 200000,
+        "expenses": 50000,
+        "fees": 25000
+      },
+      {
+        "date": "09/07",
+        "revenue": 280000,
+        "expenses": 60000,
+        "fees": 45000
+      },
+      {
+        "date": "10/07",
+        "revenue": 120000,
+        "expenses": 20000,
+        "fees": 15000
+      },
+      {
+        "date": "11/07",
+        "revenue": 180000,
+        "expenses": 55000,
+        "fees": 20000
+      },
+      {
+        "date": "12/07",
+        "revenue": 500000,
+        "expenses": 35000,
+        "fees": 20000
+      },
+      {
+        "date": "13/07",
+        "revenue": 130000,
+        "expenses": 60000,
+        "fees": 10000
+      }
+    ],
+    "month": [
+      { "date": "Jan", "expenses": 45000, "revenue": 180000, "fees": 25000 },
+      { "date": "Feb", "expenses": 30000, "revenue": 120000, "fees": 20000 },
+      { "date": "Mar", "expenses": 65000, "revenue": 280000, "fees": 35000 },
+      { "date": "Apr", "expenses": 25000, "revenue": 160000, "fees": 18000 },
+      { "date": "May", "expenses": 80000, "revenue": 350000, "fees": 45000 },
+      { "date": "Jun", "expenses": 40000, "revenue": 90000, "fees": 25000 },
+      { "date": "Jul", "expenses": 70000, "revenue": 220000, "fees": 40000 },
+      { "date": "Aug", "expenses": 55000, "revenue": 170000, "fees": 30000 },
+      { "date": "Sep", "expenses": 60000, "revenue": 200000, "fees": 35000 },
+      { "date": "Oct", "expenses": 35000, "revenue": 140000, "fees": 22000 },
+      { "date": "Nov", "expenses": 75000, "revenue": 340000, "fees": 38000 },
+      { "date": "Dec", "expenses": 90000, "revenue": 420000, "fees": 50000 }
+    ],
+    "year": [
+      {
+        "date": "2020",
+        "expenses": 280000,
+        "revenue": 580000,
+        "fees": 150000
+      },
+      {
+        "date": "2021",
+        "expenses": 320000,
+        "revenue": 650000,
+        "fees": 180000
+      },
+      {
+        "date": "2022",
+        "expenses": 450000,
+        "revenue": 950000,
+        "fees": 250000
+      },
+      {
+        "date": "2023",
+        "expenses": 200000,
+        "revenue": 520000,
+        "fees": 120000
+      },
+      { "date": "2024", "expenses": 380000, "revenue": 820000, "fees": 200000 }
+    ]
+  },
+  "teamLeaderboard": [
+    {
+      "id": 1,
+      "name": "Alex Chen",
+      "handle": "@alexchen",
+      "streak": "2 WEEKS STREAK",
+      "deals": 148,
+      "avatar": "/avatars/user_krimson.png",
+      "featured": true,
+      "subtitle": "2 WEEKS STREAK"
+    },
+    {
+      "id": 2,
+      "name": "Sarah Kim",
+      "handle": "@sarahkim",
+      "streak": "",
+      "deals": 129,
+      "avatar": "/avatars/user_mati.png"
+    },
+    {
+      "id": 3,
+      "name": "Marcus Johnson",
+      "handle": "@marcusj",
+      "streak": "",
+      "deals": 108,
+      "avatar": "/avatars/user_pek.png"
+    },
+    {
+      "id": 4,
+      "name": "Emma Wilson",
+      "handle": "@emmaw",
+      "streak": "",
+      "deals": 64,
+      "avatar": "/avatars/user_joyboy.png"
+    }
+  ],
+  "securityStatus": [
+    {
+      "title": "GUARD BOTS",
+      "value": "124/124",
+      "status": "[RUNNING...]",
+      "variant": "success"
+    },
+    {
+      "title": "FIREWALL",
+      "value": "99.9%",
+      "status": "[BLOCKED]",
+      "variant": "success"
+    },
+    {
+      "title": "HTML WARNINGS",
+      "value": "12042",
+      "status": "[ACCESSIBILITY]",
+      "variant": "warning"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "notif-1",
+      "title": "PAYMENT RECEIVED",
+      "message": "Your payment to Acme Financial has been processed successfully.",
+      "timestamp": "2024-07-10T13:39:00Z",
+      "type": "success",
+      "read": false,
+      "priority": "medium"
+    },
+    {
+      "id": "notif-2",
+      "title": "WELCOME TO FINTECHCO",
+      "message": "Your financial intelligence platform is ready. Explore analytics and insights.",
+      "timestamp": "2024-07-10T13:35:00Z",
+      "type": "info",
+      "read": false,
+      "priority": "low"
+    },
+    {
+      "id": "notif-3",
+      "title": "SYSTEM UPDATE",
+      "message": "Security patches have been applied to all guard bots.",
+      "timestamp": "2024-07-10T12:15:00Z",
+      "type": "info",
+      "read": true,
+      "priority": "medium"
+    },
+    {
+      "id": "notif-4",
+      "title": "FIREWALL ALERT",
+      "message": "Blocked 247 suspicious connection attempts in the last hour.",
+      "timestamp": "2024-07-10T11:45:00Z",
+      "type": "warning",
+      "read": true,
+      "priority": "high"
+    }
+  ],
+  "widgetData": {
+    "location": "Buenos Aires, Argentina",
+    "timezone": "UTC-3",
+    "temperature": "18°C",
+    "weather": "Partly Cloudy",
+    "date": "Wednesday, July 10th, 2025"
+  }
+}
